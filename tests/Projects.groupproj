@@ -1,0 +1,40 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{515bb503-da52-4bdc-976b-47e9f6cffe33}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="Calculadora">
+    <MSBuild Projects="..\src\Calculadora.dproj" Targets="" />
+  </Target>
+  <Target Name="Calculadora:Clean">
+    <MSBuild Projects="..\src\Calculadora.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="Calculadora:Make">
+    <MSBuild Projects="..\src\Calculadora.dproj" Targets="Make" />
+  </Target>
+  <Target Name="CalculadoraTests">
+    <MSBuild Projects="CalculadoraTests.dproj" Targets="" />
+  </Target>
+  <Target Name="CalculadoraTests:Clean">
+    <MSBuild Projects="CalculadoraTests.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="CalculadoraTests:Make">
+    <MSBuild Projects="CalculadoraTests.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="Calculadora;CalculadoraTests" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="Calculadora:Clean;CalculadoraTests:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="Calculadora:Make;CalculadoraTests:Make" />
+  </Target>
+</Project>
