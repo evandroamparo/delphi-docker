@@ -16,7 +16,7 @@ implementation
 
 function TCalculadora.Somar(x, y: double): double;
 begin
-
+   result := x + y;
 end;
 
 end.
