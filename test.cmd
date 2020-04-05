@@ -4,4 +4,8 @@ msbuild /target:Build /property:config=Release /verbosity:quiet /nologo tests\Ca
 
 if %ERRORLEVEL% neq 0 exit /b 1
 
-tests\bin\CalculadoraTests.exe
+cd tests\bin\
+
+powershell ".\CalculadoraTests.exe | tee tests.txt"
+
+type tests.txt | findstr OK
