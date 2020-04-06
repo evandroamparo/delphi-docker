@@ -17,5 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Dockeu pull
+      run: docker pull evandroamparo/delphi2007-build
+
     - name: Build tests
       run: docker run -v ${pwd}:C:\app --rm evandroamparo/delphi2007-build cmd /c "cd C:\app & test.cmd" 
