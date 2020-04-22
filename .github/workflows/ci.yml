@@ -20,5 +20,8 @@ jobs:
     - name: Docker pull
       run: docker pull evandroamparo/delphi2007-build
 
-    - name: Build tests
-      run: docker run -v ${pwd}:C:\app --rm evandroamparo/delphi2007-build cmd /c "cd C:\app & test.cmd" 
+    - name: Build
+      run: docker run -v ${pwd}:C:\app --rm evandroamparo/delphi2007-build cmd /c "cd C:\app & build.cmd" 
+
+    - name: Tests
+      run: test.cmd
