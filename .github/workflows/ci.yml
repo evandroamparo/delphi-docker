@@ -24,4 +24,5 @@ jobs:
       run: docker run -v ${pwd}:C:\app --rm evandroamparo/delphi2007-build cmd /c "cd C:\app & build.cmd" 
 
     - name: Tests
+      shell: cmd /s /c
       run: test.cmd
