@@ -24,4 +24,5 @@ jobs:
       run: docker run -v ${pwd}:C:\app --rm evandroamparo/build-machine cmd /c "cd C:\app & build.cmd" 
 
     - name: Tests
+      shell: cmd
       run: test.cmd
