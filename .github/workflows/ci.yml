@@ -24,11 +24,7 @@ jobs:
       run: docker run -v ${pwd}:C:\app --rm evandroamparo/delphi2007-build cmd /c "cd C:\app & build.cmd" 
 
     - name: Test
-      run: docker run -v ${pwd}:C:\app --rm evandroamparo/build-machine cmd /c "cd C:\app & test.cmd" 
+      run: test.cmd
 
     - name: Compile installer
-      run: docker run -v ${pwd}:C:\app --rm evandroamparo/build-machine cmd /c "cd C:\app & setup.cmd" 
-
-    - name: Tests
-      shell: cmd
-      run: test.cmd
+      run: docker run -v ${pwd}:C:\app --rm evandroamparo/delphi2007-build cmd /c "cd C:\app & setup.cmd" 
