@@ -1,6 +1,6 @@
 buttons:
   - title: Run tests
-    action: "run_tests"
+    action: "CI"
     description: Run your tests
     confirm: true
     links:
