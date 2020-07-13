@@ -1,0 +1,8 @@
+buttons:
+  - title: Run tests
+    action: "run_tests"
+    description: Run your tests
+    confirm: true
+    links:
+      - name: "View Action on GitHub"
+        value: https://github.com/evandroamparo/delphi-docker/actions
