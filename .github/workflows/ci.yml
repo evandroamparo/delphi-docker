@@ -28,3 +28,6 @@ jobs:
 
     - name: Compile installer
       run: docker run -v ${pwd}:C:\app --rm evandroamparo/delphi2007-build cmd /c "cd C:\app & setup.cmd" 
+    - uses: actions/upload-artifact@v2
+      with: 
+        path: setup/bin/*.exe
